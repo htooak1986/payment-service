@@ -45,11 +45,11 @@ jobs:
         run: |
           docker build \
             -f deployment/Dockerfile.dev \
-            -t ghcr.io/zawthanoo/payment-service:${{ steps.tag-version.outputs.version }} \
+            -t ghcr.io/htooak1986/payment-service:${{ steps.tag-version.outputs.version }} \
             .
 
       - name: Push Docker Image
-        run: docker push ghcr.io/zawthanoo/payment-service:${{ steps.tag-version.outputs.version }}
+        run: docker push ghcr.io/htooak1986/payment-service:${{ steps.tag-version.outputs.version }}
 
       # - name: Checkout Kustomize chart Repository
       #   uses: actions/checkout@v4
